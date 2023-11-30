@@ -5,8 +5,7 @@ const Feed= ({ navigation }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        // Fetch posts from your backend or API
-        // For demonstration, using static data
+        
         const fetchedPosts = [
             // Example posts
             {
@@ -51,7 +50,7 @@ const Feed= ({ navigation }) => {
                 author: 'John Doe',
                 imageUrl: 'https://source.unsplash.com/featured/?nature',
             },
-            // Add more posts
+          
         ];
         setPosts(fetchedPosts);
     }, []);
@@ -60,13 +59,16 @@ const Feed= ({ navigation }) => {
         return (
             <TouchableOpacity 
                 style={styles.postContainer}
-                onPress={() => {/* Navigate to post detail */}}
+                onPress={() => {navigation.navigate('PostDetail', { post: item })}
+            }
             >
                 <Image source={{ uri: item.imageUrl }} style={styles.postImage} />
                 <View style={styles.postContent}>
                     <Text style={styles.postTitle}>{item.title}</Text>
                     <Text style={styles.postExcerpt}>{item.excerpt}</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                     <Text style={styles.postAuthor}>By {item.author}</Text>
+                    </TouchableOpacity>
                 </View>
             </TouchableOpacity>
         );

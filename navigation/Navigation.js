@@ -5,6 +5,8 @@ import SplashScreen from "../screens/SplashScreen";
 import Feed from "../screens/Feed";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import PostDetail from "../screens/PostDetail";
+import Profile from "../screens/Profile";
 
 
 
@@ -16,7 +18,10 @@ function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator >
+
         <Stack.Screen name="Feed" component={Feed} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="PostDetail" component={PostDetail} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />

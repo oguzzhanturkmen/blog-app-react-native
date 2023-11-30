@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
     },
     button: {
         marginTop: 10,
-        backgroundColor: 'blue', // Change to your preferred color
+        backgroundColor: 'black', 
     },
     linkText: {
         marginTop: 15,
-        color: 'blue', // Change to your preferred color
+        color: 'black', 
         textAlign: 'center',
     }
 });

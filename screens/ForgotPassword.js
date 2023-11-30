@@ -6,8 +6,7 @@ const ForgotPassword = ({ navigation }) => {
     const [email, setEmail] = useState('');
 
     const handlePasswordReset = () => {
-        // Implement password reset logic here
-        // Usually involves sending a password reset email
+        
     };
 
     return (

@@ -4,14 +4,14 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 const SplashScreen = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('Login'); // Replace 'Login' with the first screen of your app
-        }, 3000); // 3000 milliseconds = 3 seconds
+            navigation.replace('Login'); 
+        }, 3000); 
     }, [navigation]);
 
     return (
         <View style={styles.container}>
             <Image
-                source={require('../assets/splash-icon.png')} // Path to your logo image
+                source={require('../assets/splash-icon.png')} 
                 style={styles.logo}
             />
             <Text style={styles.title}>Black Pen</Text>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff', // You can change this to match your app's theme
+        backgroundColor: '#fff', 
     },
     logo: {
         width: 100,
